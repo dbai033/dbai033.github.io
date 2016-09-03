@@ -1,11 +1,21 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html><head><meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>UoA</title><link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css"></head>
+<html><head><meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>UoA</title><link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css"><style type="text/css">
+a {
+  text-decoration: none;
+  color: white;
+}
+
+</style><style type="text/css">
+address {
+}
+
+</style></head>
 <body style="margin-top: 0px; height: 658px;">
 <br>
 <table style="text-align: left; width: 1763px; height: 303px;" border="0" cellpadding="2" cellspacing="2">
 <tbody>
 <tr>
-<td style="height: 161px; background-color: white;"><div style="color: rgb(51, 51, 153); font-weight: bold; text-align: center;"><div style="text-align: center;"><big><big style="font-family: Times New Roman,Times,serif;"><big></big></big></big></div><table style="text-align: left; width: 100%; height: 82px;" border="0" cellpadding="2" cellspacing="2"><tbody><tr><td style="width: 576px; text-align: center;"><small><small><small><small><small><small><img style="width: 73px; height: 73px;" alt="" src="Adobe_Brackets_v0.0.x_icon.png"></small></small></small></small></small></small>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; <img style="width: 150px; height: 71px;" alt="" src="cartologo.png"> &nbsp; &nbsp;&nbsp; &nbsp;<img style="width: 165px; height: 74px;" alt="" src="Mapbox_Logo_2014.svg_.png"></td><td style="width: 601px; text-align: center;"><big><big><big>University of Auckland</big></big></big><br><big style="font-family: Times New Roman;"><big>Geography 771</big></big><br style="font-family: Times New Roman;"><big style="font-family: Times New Roman;">2016&nbsp; Semester 2</big></td><td style="width: 546px;"><img style="width: 220px; height: 73px;" alt="" src="mmm.png"> &nbsp;<img style="width: 229px; height: 65px;" alt="" src="GeoJSON.png"><img style="width: 73px; height: 73px;" alt="" src="Unofficial_JavaScript_logo_2.svg.png"></td></tr></tbody></table><big><big style="font-family: Times New Roman,Times,serif;"><big><br></big></big></big></div><div style="text-align: center; font-weight: bold; color: rgb(0, 0, 153); margin-top: 0px; width: 1751px; height: 6px;"><div style="text-align: center;"><big style="font-family: Times New Roman,Times,serif;"><big></big></big><br></div><big><big><small><small>
+<td style="height: 161px; background-color: white;"><div style="color: rgb(51, 51, 153); font-weight: bold; text-align: center;"><div style="text-align: center;"><big><big style="font-family: Times New Roman,Times,serif;"><big></big></big></big></div><table style="text-align: left; height: 82px; width: 100%;" border="0" cellpadding="2" cellspacing="2"><tbody><tr><td style="width: 576px; text-align: center;"><small><small><small><small><small><small><img style="width: 73px; height: 73px;" alt="" src="Adobe_Brackets_v0.0.x_icon.png"></small></small></small></small></small></small>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; <img style="width: 150px; height: 71px;" alt="" src="cartologo.png"> &nbsp; &nbsp;&nbsp; &nbsp;<img style="width: 165px; height: 74px;" alt="" src="Mapbox_Logo_2014.svg_.png"></td><td style="width: 601px; text-align: center;"><big><big><big>University of Auckland</big></big></big><br><big style="font-family: Times New Roman;"><big>Geography 771</big></big><br style="font-family: Times New Roman;"><big style="font-family: Times New Roman;">2016&nbsp; Semester 2</big></td><td style="width: 546px;"><img style="width: 220px; height: 73px;" alt="" src="mmm.png"> &nbsp;<img style="width: 229px; height: 65px;" alt="" src="GeoJSON.png"><img style="width: 73px; height: 73px;" alt="" src="Unofficial_JavaScript_logo_2.svg.png"></td></tr></tbody></table><big><big style="font-family: Times New Roman,Times,serif;"><big><br></big></big></big></div><div style="text-align: center; font-weight: bold; color: rgb(0, 0, 153); margin-top: 0px; width: 1751px; height: 6px;"><div style="text-align: center;"><big style="font-family: Times New Roman,Times,serif;"><big></big></big><br></div><big><big><small><small>
 <br>
 </small></small></big></big></div>
 <table style="text-align: left; background-color: white; width: 100%;" border="0" cellpadding="2" cellspacing="2">
@@ -13,7 +23,7 @@
 <tr>
 <td style="color: white; background-color: rgb(78, 78, 156);"><big>Home<br>
 </big></td>
-<td style="color: white; background-color: rgb(78, 78, 156);"><a href="lab2.html"><big>Lab
+<td style="background-color: rgb(78, 78, 156); color: white;"><a href="lab2.html"><big>Lab
 2</big></a></td>
 <td style="color: white; background-color: rgb(78, 78, 156);"><big>Lab
 3</big></td>
@@ -33,7 +43,7 @@ example below is a basic web map of a Waitakere Rangers Regional Park.
 This was created using Leaflet, through the use of Google Earth and
 converted to GeoJSON using the geojson.io API.<br></div></td></tr></tbody></table><script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
 <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script><script></script>
-<div id="mapid" style="width: 100%; height: 1022px;"></div>
+<div id="mapid" style="height: 1022px; width: 1766px;"></div>
 <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
 <script>
 var mymap = L.map('mapid').setView([-37.01708, 174.60644], 14);
