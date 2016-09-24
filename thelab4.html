@@ -1,86 +1,84 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html><head><meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>UoA</title><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="http://npmcdn.com/leaflet@0.7.7/dist/leaflet.css"><style>
+<html><head>
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>UoA</title>
 
-
-    a.nav:link    {color:white; background-color:transparent; text-decoration:none}
-    a.nav:visited {color:white; background-color:transparent; text-decoration:none}
-    a.nav:hover   {color:#00ffff; background-color:transparent; text-decoration:none}
-    a.nav:active  {color:white; background-color:transparent; text-decoration:none}
-
-    .info {
-      padding: 14px;
-      font: 16px Times, sans-serif;
-      background: white;
-      background: rgba(255,255,255,0.8);
-      box-shadow: 0 0 12px rgba(0,0,0,0.2);
-      border-radius: 12px;
-    }
-
-    .info h4 {
-      margin: 0 0 10px;
-      color: black;
-    }
-
-    .legend {
-      text-align: left;
-      line-height: 24px;
-      color: #555;
-    }
-
-    .legend i {
-      width: 24px;
-      height: 24px;
-      float: left;
-      margin-right: 10px;
-      opacity: .85;
-    }
-
-  </style><style>
-
-
-    a.nav:link    {color:white; background-color:transparent; text-decoration:none}
-    a.nav:visited {color:white; background-color:transparent; text-decoration:none}
-    a.nav:hover   {color:#00ffff; background-color:transparent; text-decoration:none}
-    a.nav:active  {color:white; background-color:transparent; text-decoration:none}
-
-    .info {
-      padding: 14px;
-      font: 16px Times, sans-serif;
-      background: white;
-      background: rgba(255,255,255,0.8);
-      box-shadow: 0 0 12px rgba(0,0,0,0.2);
-      border-radius: 12px;
-    }
-
-    .info h4 {
-      margin: 0 0 10px;
-      color: black;
-    }
-
-    .legend {
-      text-align: left;
-      line-height: 24px;
-      color: #555;
-    }
-
-    .legend i {
-      width: 24px;
-      height: 24px;
-      float: left;
-      margin-right: 10px;
-      opacity: .85;
-    }
-
-  </style><style type="text/css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://npmcdn.com/leaflet@0.7.7/dist/leaflet.css">
+<style>
+a.nav:link {color:white; background-color:transparent; text-decoration:none}
+a.nav:visited {color:white; background-color:transparent; text-decoration:none}
+a.nav:hover {color:#00ffff; background-color:transparent; text-decoration:none}
+a.nav:active {color:white; background-color:transparent; text-decoration:none}
+.info {
+padding: 14px;
+font: 16px Times, sans-serif;
+background: white;
+background: rgba(255,255,255,0.8);
+box-shadow: 0 0 12px rgba(0,0,0,0.2);
+border-radius: 12px;
+}
+.info h4 {
+margin: 0 0 10px;
+color: black;
+}
+.legend {
+text-align: left;
+line-height: 24px;
+color: #555;
+}
+.legend i {
+width: 24px;
+height: 24px;
+float: left;
+margin-right: 10px;
+opacity: .85;
+}
+</style>
+<style>
+a.nav:link {color:white; background-color:transparent; text-decoration:none}
+a.nav:visited {color:white; background-color:transparent; text-decoration:none}
+a.nav:hover {color:#00ffff; background-color:transparent; text-decoration:none}
+a.nav:active {color:white; background-color:transparent; text-decoration:none}
+.info {
+padding: 14px;
+font: 16px Times, sans-serif;
+background: white;
+background: rgba(255,255,255,0.8);
+box-shadow: 0 0 12px rgba(0,0,0,0.2);
+border-radius: 12px;
+}
+.info h4 {
+margin: 0 0 10px;
+color: black;
+}
+.legend {
+text-align: left;
+line-height: 24px;
+color: #555;
+}
+.legend i {
+width: 24px;
+height: 24px;
+float: left;
+margin-right: 10px;
+opacity: .85;
+}
+</style>
+<style type="text/css">
 a {
 }
-
-</style><style type="text/css">
+</style>
+<style type="text/css">
 a {
 }
-
-</style></head>
-<body><table style="text-align: left; width: 1870px; height: 272px;" border="0" cellpadding="2" cellspacing="2"><tbody><tr><td style="height: 161px; background-color: white;">
+</style>
+</head>
+<body>
+<table style="text-align: left; width: 1870px; height: 272px;" border="0" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="height: 161px; background-color: white;">
 <div style="color: rgb(51, 51, 153); font-weight: bold; text-align: center;">
 <table style="text-align: left; width: 1858px; height: 154px;" border="0" cellpadding="2" cellspacing="2">
 <tbody>
@@ -100,7 +98,8 @@ a {
 of Auckland</big></big></big></big><br>
 <span style="font-style: italic; color: rgb(0, 57, 166);">2016
 Semester 2 / Geography 771:</span><big style="color: rgb(0, 57, 166);"><br>
-</big><big><span style="font-family: Arial; font-weight: bold;">Lab 4: Hexbin Mapping with QGIS, GEOJSON and&nbsp;Leaflet </span></big><big><span style="font-family: Arial; font-weight: bold;"></span></big><small><small style="color: rgb(0, 57, 166);"><span style="font-family: Arial; font-weight: bold;"></span></small></small></div>
+</big><big><span style="font-family: Arial; font-weight: bold;">Lab 4: Hexbin
+Mapping with QGIS, GEOJSON and&nbsp;Leaflet </span></big><big><span style="font-family: Arial; font-weight: bold;"></span></big><small><small style="color: rgb(0, 57, 166);"><span style="font-family: Arial; font-weight: bold;"></span></small></small></div>
 </td>
 <td style="width: 495px;">&nbsp;<img style="width: 133px; height: 143px;" alt="" src="file:///H:/Danial/website/QGis_Logo.png"><br>
 </td>
@@ -130,149 +129,99 @@ Semester 2 / Geography 771:</span><big style="color: rgb(0, 57, 166);"><br>
 </tr>
 </tbody>
 </table>
-
-
-
-	
-	
-	
-	
-	<div style="text-align: center;"><script src="http://npmcdn.com/leaflet@0.7.7/dist/leaflet.js"></script><big><big><big><span style="font-family: Times New Roman,Times,serif;"> &nbsp; &nbsp; &nbsp;<span style="color: red;"> <br></span><big><span style="text-decoration: underline; font-family: Century; color: red;">Structural Fire Incidences in the Auckland Region, 2013-2016</span></big></span></big></big></big>
-
-
-	
-
-</div><div id="map" style="width: 100%; height: 920px;"></div>
-
+<div style="text-align: center;">
+<script src="http://npmcdn.com/leaflet@0.7.7/dist/leaflet.js"></script><big><big><big><span style="font-family: Times New Roman,Times,serif;">
+&nbsp; &nbsp; &nbsp;<span style="color: red;">
+<br>
+</span><span style="font-family: Century; color: red; font-weight: bold;">Structural
+Fire Incidences in the Auckland Region, 2013-2016</span></span></big></big></big>
+</div>
+<div id="map" style="width: 100%; height: 905px;"></div>
 <script type="text/javascript" src="js/HexFires.js"></script>
-
 <script>
-  
-  var map = L.map('map').setView([-36.905, 174.832360900752], 11);
- 	
- 	L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', 
-
-    {
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> | &copy; <a href="http://cartodb.com/attributions">Carto</a> | Fire incidence data &copy; <a href="http://cartodb.com/attributions">2016 New Zealand Fire Service</a>',
-         }).addTo(map);
-
-		function getColor(d) {
-    	return 	d > 60 ? '#800000' :
-           		d > 35  ? '#cc0000' :
-           		d > 25  ? '#ff1a1a' :
-          		d > 15  ? '#ff4d4d' :
-           		d > 10  ? '#ff8080' :
-           		d > 5   ? '#ffb3b3' :
-           		d > 0   ? '#ffe6e6' :
-                        '#ffffff' ;
-	}
-
-		function style(feature) {
-    	return {
-        	fillColor: getColor(feature.properties.PNTCNT),
-        	weight: 0.5,
-        	opacity: 1,
-        	color: 'black',
-        	fillOpacity: 0.8
-    	};
-	}
-	
-var geojson;
-
-    function highlightFeature(e) {
-        var layer = e.target;
-
-        layer.setStyle({
-        weight: 3.5,
-        color: '#00ff00',
-        fillOpacity: 1
-    });
-
-      if (!L.Browser.ie && !L.Browser.opera) {
-        layer.bringToFront();
-      }
-
-      info.update(layer.feature.properties);
-      }
-
-
-    function resetHighlight(e) {
-    geojson.resetStyle(e.target);
-  }
-
-
-    function onEachFeature(feature, layer) {
-      layer.on({
-        mouseover: highlightFeature,
-        mouseout: resetHighlight,
-    });
-  }
-
-geojson = L.geoJson(hex, {
-  style: style,
-  onEachFeature: onEachFeature
+var map = L.map('map').setView([-36.905, 174.832360900752], 11);
+L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> | &copy; <a href="http://cartodb.com/attributions">Carto</a> | Fire incidence data &copy; <a href="http://cartodb.com/attributions">2016 New Zealand Fire Service</a>',
 }).addTo(map);
-
+function getColor(d) {
+return d > 60 ? '#800000' :
+d > 35 ? '#cc0000' :
+d > 25 ? '#ff1a1a' :
+d > 15 ? '#ff4d4d' :
+d > 10 ? '#ff8080' :
+d > 5 ? '#ffb3b3' :
+d > 0 ? '#ffe6e6' :
+'#ffffff' ;
+}
+function style(feature) {
+return {
+fillColor: getColor(feature.properties.PNTCNT),
+weight: 0.5,
+opacity: 1,
+color: 'black',
+fillOpacity: 0.8
+};
+}
+var geojson;
+function highlightFeature(e) {
+var layer = e.target;
+layer.setStyle({
+weight: 3.5,
+color: '#00ff00',
+fillOpacity: 1
+});
+if (!L.Browser.ie && !L.Browser.opera) {
+layer.bringToFront();
+}
+info.update(layer.feature.properties);
+}
+function resetHighlight(e) {
+geojson.resetStyle(e.target);
+}
+function onEachFeature(feature, layer) {
+layer.on({
+mouseover: highlightFeature,
+mouseout: resetHighlight,
+});
+}
+geojson = L.geoJson(hex, {
+style: style,
+onEachFeature: onEachFeature
+}).addTo(map);
 var info = L.control();
-
-    info.onAdd = function (map) { 
-      this._div = L.DomUtil.create('div', 'info');
-      this.update();
-      return this._div;
-    };
-    
-    info.update = function (props) {
-      this._div.innerHTML = '<h4>The number of structural fires reported:</h4>' +  (props ?
-         props.PNTCNT + ' fires '
-        : '(place mouse cursor over a hexbin)');
-    };
-
-    info.addTo(map);
-
-
+info.onAdd = function (map) { this._div = L.DomUtil.create('div', 'info');
+this.update();
+return this._div;
+};
+info.update = function (props) {
+this._div.innerHTML = '<h4>The number of structural fires reported:</h4>' + (props ?
+props.PNTCNT + ' fires '
+: '(place mouse cursor over a hexbin)');
+};
+info.addTo(map);
 var legend = L.control({position: 'bottomright'});
-
-  legend.onAdd = function (map) {
-
-    var div = L.DomUtil.create('div', 'info legend'),
-        grades = [0, 5, 10, 15, 25, 35, 60],
-        key_labels = [ "1-5", "6-10", "11-15", '16-25', '26-35', '36-60', '>60'],
-        labels = ["<h4>Structural fires (2013-2016):</h4>"],
-        from, to;
-
-
-      for (var i = 0; i < grades.length; i++) {
-        from = grades[i];
-        to = grades[i + 1];
-
-        labels.push(
-          '<i style="background:' + getColor(from + 1) + '"></i> ' +
-           key_labels[i]);
-      }
-
-      div.innerHTML = labels.join('<br>');
-      return div;
-    };
-
-    legend.addTo(map);
-
-</script>
-
+legend.onAdd = function (map) {
+var div = L.DomUtil.create('div', 'info legend'),
+grades = [0, 5, 10, 15, 25, 35, 60],
+key_labels = [ "1-5", "6-10", "11-15", '16-25', '26-35', '36-60', '>60'],
+labels = ["<h4>Structural fires (2013-2016):</h4>"],
+from, to;
+for (var i = 0; i < grades.length; i++) {
+from = grades[i];
+to = grades[i + 1];
+labels.push(
+'<i style="background:' + getColor(from + 1) + '"></i> ' +
+key_labels[i]);
+}
+div.innerHTML = labels.join('<br>');
+return div;
+};
+legend.addTo(map);
+</script><br>
 <br>
-            
-          
-        
-      
-      
-    
-  
-
-
 <br>
-
-<br>
-
-
-
-	
-</td></tr></tbody></table></body></html>
+</td>
+</tr>
+</tbody>
+</table>
+</body></html>
