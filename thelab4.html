@@ -156,8 +156,6 @@ Semester 2 / Geography 771:</span><big style="color: rgb(0, 57, 166);"><br>
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> | &copy; <a href="http://cartodb.com/attributions">Carto</a> | Fire incidence data &copy; <a href="http://cartodb.com/attributions">2016 New Zealand Fire Service</a>',
          }).addTo(map);
 
-	L.geoJson(hex).addTo(map);
-    
 		function getColor(d) {
     	return 	d > 60 ? '#800000' :
            		d > 35  ? '#cc0000' :
@@ -178,7 +176,9 @@ Semester 2 / Geography 771:</span><big style="color: rgb(0, 57, 166);"><br>
         	fillOpacity: 0.8
     	};
 	}
-
+	
+	L.geoJson(hex).addTo(map);
+	
 var geojson;
 
     function highlightFeature(e) {
