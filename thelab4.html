@@ -1,64 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html><head><meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>UoA</title></head><body><table style="text-align: left; width: 1870px; height: 272px;" border="0" cellpadding="2" cellspacing="2"><tbody><tr><td style="height: 161px; background-color: white;">
-<div style="color: rgb(51, 51, 153); font-weight: bold; text-align: center;">
-<table style="text-align: left; width: 1858px; height: 154px;" border="0" cellpadding="2" cellspacing="2">
-<tbody>
-<tr>
-<td style="text-align: center; width: 565px;">&nbsp;
-&nbsp; &nbsp; &nbsp;
-&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp;&nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
-&nbsp; &nbsp; &nbsp;&nbsp;
-&nbsp; &nbsp;&nbsp; &nbsp; <img style="width: 112px; height: 148px;" alt="" src="file:///H:/Danial/website/globe-32812_960_720.png">&nbsp;</td>
-<td style="text-align: center; color: rgb(0, 57, 166); width: 663px; font-family: Calibri;">
-<div style="text-align: center; margin-left: 27px; width: 587px;"><big><big><big><big>University
-of Auckland</big></big></big></big><br>
-<span style="font-style: italic; color: rgb(0, 57, 166);">2016
-Semester 2 / Geography 771:</span><big style="color: rgb(0, 57, 166);"><br>
-</big><big><span style="font-family: Arial; font-weight: bold;">Lab 4: Hexbin Mapping with QGIS, GEOJSON and&nbsp; Leaflet </span></big><big><span style="font-family: Arial; font-weight: bold;"></span></big><small><small style="color: rgb(0, 57, 166);"><span style="font-family: Arial; font-weight: bold;"></span></small></small></div>
-</td>
-<td style="width: 495px;">&nbsp;<img style="width: 133px; height: 143px;" alt="" src="file:///H:/Danial/website/QGis_Logo.png"><br>
-</td>
-</tr>
-</tbody>
-</table>
-<big><big style="font-family: Times New Roman,Times,serif;"><big><br>
-</big></big></big></div>
-<div style="text-align: center; font-weight: bold; color: rgb(0, 0, 153); margin-top: 0px; width: 1858px; height: 6px;">
-<div style="text-align: center;"><br>
-</div>
-<big><big><small><small><br>
-</small></small></big></big></div>
-<table style="text-align: left; background-color: white; width: 1858px; height: 33px;" border="0" cellpadding="2" cellspacing="2">
-<tbody>
-<tr>
-<td style="color: white; background-color: rgb(78, 78, 156);"><big><a href="file:///H:/Danial/website/index.html">Home</a><br>
-</big></td>
-<td style="background-color: rgb(78, 78, 156); color: white;"><a href="file:///H:/Danial/website/lab2.html"><big>Lab
-2</big></a></td>
-<td style="color: white; background-color: rgb(78, 78, 156);"><a href="file:///H:/Danial/website/lab%203.html"><big>Lab
-3</big></a></td>
-<td style="color: white; background-color: rgb(78, 78, 156);"><big>Lab
-4</big></td>
-<td style="color: white; background-color: rgb(78, 78, 156);"><big>Lab
-5</big></td>
-</tr>
-</tbody>
-</table>
-<title>Lab 4 HTML shel</title><title>Lab 4 HTML shell</title><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-	
-	
-	
-	<link rel="stylesheet" href="http://npmcdn.com/leaflet@0.7.7/dist/leaflet.css">
-	<script src="http://npmcdn.com/leaflet@0.7.7/dist/leaflet.js"></script>
-
-<style>
+<html><head><meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>UoA</title><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="http://npmcdn.com/leaflet@0.7.7/dist/leaflet.css"><style>
 
 
     a.nav:link    {color:white; background-color:transparent; text-decoration:none}
@@ -94,10 +35,114 @@ Semester 2 / Geography 771:</span><big style="color: rgb(0, 57, 166);"><br>
       opacity: .85;
     }
 
-  </style>
+  </style><style>
+
+
+    a.nav:link    {color:white; background-color:transparent; text-decoration:none}
+    a.nav:visited {color:white; background-color:transparent; text-decoration:none}
+    a.nav:hover   {color:#00ffff; background-color:transparent; text-decoration:none}
+    a.nav:active  {color:white; background-color:transparent; text-decoration:none}
+
+    .info {
+      padding: 14px;
+      font: 16px Times, sans-serif;
+      background: white;
+      background: rgba(255,255,255,0.8);
+      box-shadow: 0 0 12px rgba(0,0,0,0.2);
+      border-radius: 12px;
+    }
+
+    .info h4 {
+      margin: 0 0 10px;
+      color: black;
+    }
+
+    .legend {
+      text-align: left;
+      line-height: 24px;
+      color: #555;
+    }
+
+    .legend i {
+      width: 24px;
+      height: 24px;
+      float: left;
+      margin-right: 10px;
+      opacity: .85;
+    }
+
+  </style><style type="text/css">
+a {
+}
+
+</style><style type="text/css">
+a {
+}
+
+</style></head>
+<body><table style="text-align: left; width: 1870px; height: 272px;" border="0" cellpadding="2" cellspacing="2"><tbody><tr><td style="height: 161px; background-color: white;">
+<div style="color: rgb(51, 51, 153); font-weight: bold; text-align: center;">
+<table style="text-align: left; width: 1858px; height: 154px;" border="0" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="text-align: center; width: 565px;">&nbsp;
+&nbsp; &nbsp; &nbsp;
+&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp;&nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+&nbsp; &nbsp; &nbsp;&nbsp;
+&nbsp; &nbsp;&nbsp; &nbsp; <img style="width: 112px; height: 148px;" alt="" src="file:///H:/Danial/website/globe-32812_960_720.png">&nbsp;</td>
+<td style="text-align: center; color: rgb(0, 57, 166); width: 663px; font-family: Calibri;">
+<div style="text-align: center; margin-left: 27px; width: 587px;"><big><big><big><big>University
+of Auckland</big></big></big></big><br>
+<span style="font-style: italic; color: rgb(0, 57, 166);">2016
+Semester 2 / Geography 771:</span><big style="color: rgb(0, 57, 166);"><br>
+</big><big><span style="font-family: Arial; font-weight: bold;">Lab 4: Hexbin Mapping with QGIS, GEOJSON and&nbsp;Leaflet </span></big><big><span style="font-family: Arial; font-weight: bold;"></span></big><small><small style="color: rgb(0, 57, 166);"><span style="font-family: Arial; font-weight: bold;"></span></small></small></div>
+</td>
+<td style="width: 495px;">&nbsp;<img style="width: 133px; height: 143px;" alt="" src="file:///H:/Danial/website/QGis_Logo.png"><br>
+</td>
+</tr>
+</tbody>
+</table>
+<big><big style="font-family: Times New Roman,Times,serif;"><big><br>
+</big></big></big></div>
+<div style="text-align: center; font-weight: bold; color: rgb(0, 0, 153); margin-top: 0px; width: 1858px; height: 6px;">
+<div style="text-align: center;"><br>
+</div>
+<big><big><small><small><br>
+</small></small></big></big></div>
+<table style="text-align: left; background-color: white; width: 1858px; height: 33px;" border="0" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="color: white; background-color: rgb(78, 78, 156);"><big><a href="file:///H:/Danial/website/index.html">Home</a><br>
+</big></td>
+<td style="background-color: rgb(78, 78, 156); color: white;"><a href="file:///H:/Danial/website/lab2.html"><big>Lab
+2</big></a></td>
+<td style="background-color: rgb(78, 78, 156); color: white;"><a href="file:///H:/Danial/website/lab%203.html"><big>Lab
+3</big></a></td>
+<td style="color: white; background-color: rgb(78, 78, 156);"><big>Lab
+4</big></td>
+<td style="color: white; background-color: rgb(78, 78, 156);"><big>Lab
+5</big></td>
+</tr>
+</tbody>
+</table>
+
+
+
+	
+	
+	
+	
+	<div style="text-align: center;"><script src="http://npmcdn.com/leaflet@0.7.7/dist/leaflet.js"></script><big><big><big><span style="font-family: Times New Roman,Times,serif;"> &nbsp; &nbsp; &nbsp;<span style="color: red;"> </span><big><span style="text-decoration: underline; font-family: Century; color: red;">Structural Fire Incidences in the Auckland Region, 2013-2016</span></big></span></big></big></big>
+
+
 	
 
-<div id="map" style="width: 100%; height: 920px;"></div>
+</div><div id="map" style="width: 100%; height: 920px;"></div>
 
 <script type="text/javascript" src="js/HexFires.js"></script>
 
@@ -231,42 +276,6 @@ var legend = L.control({position: 'bottomright'});
 <br>
 
 
-<style>
 
-
-    a.nav:link    {color:white; background-color:transparent; text-decoration:none}
-    a.nav:visited {color:white; background-color:transparent; text-decoration:none}
-    a.nav:hover   {color:#00ffff; background-color:transparent; text-decoration:none}
-    a.nav:active  {color:white; background-color:transparent; text-decoration:none}
-
-    .info {
-      padding: 14px;
-      font: 16px Times, sans-serif;
-      background: white;
-      background: rgba(255,255,255,0.8);
-      box-shadow: 0 0 12px rgba(0,0,0,0.2);
-      border-radius: 12px;
-    }
-
-    .info h4 {
-      margin: 0 0 10px;
-      color: black;
-    }
-
-    .legend {
-      text-align: left;
-      line-height: 24px;
-      color: #555;
-    }
-
-    .legend i {
-      width: 24px;
-      height: 24px;
-      float: left;
-      margin-right: 10px;
-      opacity: .85;
-    }
-
-  </style>
 	
 </td></tr></tbody></table></body></html>
