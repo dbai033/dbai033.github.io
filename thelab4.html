@@ -159,14 +159,14 @@ Semester 2 / Geography 771:</span><big style="color: rgb(0, 57, 166);"><br>
 	L.geoJson(hex).addTo(map);
     
 		function getColor(d) {
-    	return 	d > 60 ? '#FF0000' :
-           		d > 35  ? '#FF3300' :
-           		d > 25  ? '#FF6600' :
-          		d > 15  ? '#FF9900' :
-           		d > 10  ? '#FFCC00' :
-           		d > 5   ? '#FFFF00' :
-           		d > 0   ? '#FFFF75' :
-                        '#FFFFCC' ;
+    	return 	d > 60 ? '#800000' :
+           		d > 35  ? '#cc0000' :
+           		d > 25  ? '#ff1a1a' :
+          		d > 15  ? '#ff4d4d' :
+           		d > 10  ? '#ff8080' :
+           		d > 5   ? '#ffb3b3' :
+           		d > 0   ? '#ffe6e6' :
+                        '#ffffff' ;
 	}
 
 		function style(feature) {
@@ -176,7 +176,7 @@ Semester 2 / Geography 771:</span><big style="color: rgb(0, 57, 166);"><br>
         	opacity: 0.9,
         	color: 'black',
 			dashArray: '0',
-        	fillOpacity: 0.9
+        	fillOpacity: 0.6
     	};
 	}
 
