@@ -1,19 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html><head>
-<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>lab 3</title>
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>UoA</title>
 
-<link href="https://api.mapbox.com/mapbox-gl-js/v0.23.0/mapbox-gl.css" rel="stylesheet">
-<meta charset="utf-8">
-<link href="https://api.mapbox.com/mapbox-gl-js/v0.23.0/mapbox-gl.css" rel="stylesheet">
-<style type="text/css">
-a {
-color: white;
-text-decoration: none;
-}
-</style>
-</head>
-<body style="width: 1858px;">
-<br>
+</head><body>
 <table style="text-align: left; width: 1841px; height: 259px;" border="0" cellpadding="2" cellspacing="2">
 <tbody>
 <tr>
@@ -25,15 +14,15 @@ text-decoration: none;
 <td style="width: 576px; text-align: left;">&nbsp;
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img style="width: 87px; height: 115px;" alt="" src="globe-32812_960_720%20-%20Copy.png"><br>
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img style="width: 87px; height: 115px;" alt="" src="file:///H:/Danial/website/globe-32812_960_720%20-%20Copy.png"><br>
 </td>
 <td style="width: 601px; text-align: center; color: rgb(0, 57, 166); font-family: Calibri;">
 <div style="text-align: center;"><big><big><big><big>University
 of Auckland</big></big></big></big><br>
 <span style="font-style: italic;">2016
 Semester 2 / Geography 771:</span><big><br>
-</big><small style="font-family: Calibri;"><small><small><small><small><small><small><small><small><span style="font-size: 23.04px; font-style: normal; font-weight: bold; letter-spacing: normal; line-height: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; display: inline ! important; float: none; color: rgb(0, 57, 166);">Lab
-3: mapping with mapbox studio &amp; mapbox gl js</span></small></small></small></small></small></small></small></small></small></div>
+<small><small><small><small><small><small><small><small><small><span style="font-size: 23.04px; font-style: normal; font-weight: bold; letter-spacing: normal; line-height: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; display: inline ! important; float: none; font-family: Calibri; color: rgb(0, 57, 166);">Lab
+3: mapping with mapbox studio &amp; mapbox gl js</span></small></small></small></small></small></small></small></small></small></big></div>
 </td>
 <td style="width: 546px;">&nbsp;
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
@@ -45,7 +34,7 @@ Semester 2 / Geography 771:</span><big><br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
 &nbsp;<small><small><small><small><small><small><small><small><small><small>
 &nbsp; </small></small></small></small></small></small></small></small></small></small>&nbsp;
-&nbsp;<img style="width: 124px; height: 128px;" alt="" src="Coat_of_arms_of_New_Zealand.svg.png"><br>
+&nbsp;<img style="width: 124px; height: 128px;" alt="" src="file:///H:/Danial/website/Coat_of_arms_of_New_Zealand.svg.png"><br>
 </td>
 </tr>
 </tbody>
@@ -59,11 +48,11 @@ Semester 2 / Geography 771:</span><big><br>
 <table style="text-align: left; background-color: white; width: 1858px; height: 23px;" border="0" cellpadding="2" cellspacing="2">
 <tbody>
 <tr>
-<td style="color: white; background-color: rgb(78, 78, 156);"><big><a style="color: white;" href="index.html">Home</a><br>
+<td style="color: white; background-color: rgb(78, 78, 156);"><big><a style="color: white;" href="file:///H:/Danial/website/index.html">Home</a><br>
 </big></td>
-<td style="background-color: rgb(78, 78, 156); color: white;"><a href="lab2.html"><big>Lab
+<td style="background-color: rgb(78, 78, 156); color: white;"><a href="file:///H:/Danial/website/lab2.html"><big>Lab
 2</big></a></td>
-<td style="color: white; background-color: rgb(78, 78, 156);"><a href="lab%203.html"><big>Lab
+<td style="color: white; background-color: rgb(78, 78, 156);"><a href="file:///H:/Danial/website/lab%203.html"><big>Lab
 3</big></a></td>
 <td style="color: white; background-color: rgb(78, 78, 156);"><big>Lab
 4</big></td>
@@ -79,8 +68,18 @@ Zealand's Great Walks</big></big></span></big></big><br>
 </td>
 </tr>
 </tbody>
-</table>
+</table>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;<a href="Lab3m1.html" target="_top">map1</a></body></html>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>&nbsp;<script>mapboxgl.accessToken = 'pk.eyJ1IjoiZGJhaTAzMyIsImEiOiJjaXJ3czI3djMwMDB5MnlsaHplc3AxNTBnIn0.eAArwnepEe9TK3dtzX6WhA';
+var map = new mapboxgl.Map({
+container: 'map',
+style: 'mapbox://styles/dbai033/cirwsmaz3004dgam8z204z2b2',
+center: [172.125775, -41.236304],
+zoom: 5
+});</script>&nbsp;&nbsp; &nbsp;
+&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;</body></html>
