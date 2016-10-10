@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html><head><title>lab 5</title>
+
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="http://npmcdn.com/leaflet@0.7.7/dist/leaflet.css">
+  <script src="http://npmcdn.com/leaflet@0.7.7/dist/leaflet.js"></script>
+  
+  <style>
+
+
+    a.nav:link    {color:white; background-color:transparent; text-decoration:none}
+    a.nav:visited {color:white; background-color:transparent; text-decoration:none}
+    a.nav:hover   {color:#00ffff; background-color:transparent; text-decoration:none}
+    a.nav:active  {color:white; background-color:transparent; text-decoration:none}
+
+
+    .info {
+      padding: 12px;
+      font: 16px Arial, sans-serif;
+      background: white;
+      background: rgba(255,255,255,0.8);
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      border-radius: 10px;
+    }
+
+    .info h4 {
+      margin: 0 0 5px;
+      color: black;
+    }
+
+    .legend {
+      text-align: left;
+      line-height: 24px;
+      color: #555;
+    }
+
+    .legend i {
+      width: 24px;
+      height: 24px;
+      float: left;
+      margin-right: 8px;
+      opacity: .65;
+    }
+
+    .leaflet-popup-close-button {
+        display:none;
+    }
+
+    .leaflet-label-overlay {
+        line-height: 0px;
+        margin-top: 12px;
+        position: absolute;
+        padding: 12px;
+        font: 14px Arial, sans-serif;
+        text-shadow: -1px 0 white, 0 1px white,
+      1px 0 white, 0 -1px white
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+
+<div id="map" style="width: 100%; height: 820px;"></div>
+
+<script type="text/javascript" src="../js/Twitter.js"></script>
+
+<script>
+  
+  var map = L.map('map').setView([-41.25, 174.832360900752], 6);
+  
+  L.tileLayer('http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png', 
+     {
+    attribution: 'Map tiles &copy; <a href="http://cartodb.com/attributions">Carto </a>| Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> | Twitter data &copy; <a href="https://twitter.com/mattzook"> @mattzook</a> & <a href="http://www.floatingsheep.org/p/dolly.html">Floating Sheep</a>',
+         }).addTo(map);
+
+
+ // colour hexbins by joint count property
+
+    // // define colur palet
+
+    function getColor(d) {
+      return  d > 1.0 ? '#006280' :
+              d > 0.9  ? '#800062' :
+              d > 0.1  ? '#628000' :
+              d > 0  ? '#628000' :
+              d > -0.1 ? 'NONE' :
+                       '006280';
+  }
+
+      // // colour the features
+
+    function style(feature) {
+      return {
+          fillColor: getColor(feature.properties.TwitterLQ),
+          weight: 1,
+          opacity: 1,
+          color: '#d3d3d3',
+          fillOpacity: 0.7
+      };
+  }
+
+// define the geojson variable
+
+  L.geoJson(Twitter, {
+  style: style
+}).addTo(map);
+
+L.LabelOverlay = L.Class.extend({
+        initialize: function(/*LatLng*/ latLng, /*String*/ label, options) {
+            this._latlng = latLng;
+            this._label = label;
+            L.Util.setOptions(this, options);
+        },
+        options: {
+            offset: new L.Point(0, 2)
+        },
+        onAdd: function(map) {
+            this._map = map;
+            if (!this._container) {
+                this._initLayout();
+            }
+            map.getPanes().overlayPane.appendChild(this._container);
+            this._container.innerHTML = this._label;
+            map.on('viewreset', this._reset, this);
+            this._reset();
+        },
+        onRemove: function(map) {
+            map.getPanes().overlayPane.removeChild(this._container);
+            map.off('viewreset', this._reset, this);
+        },
+        _reset: function() {
+            var pos = this._map.latLngToLayerPoint(this._latlng);
+            var op = new L.Point(pos.x + this.options.offset.x, pos.y - this.options.offset.y);
+            L.DomUtil.setPosition(this._container, op);
+        },
+        _initLayout: function() {
+            this._container = L.DomUtil.create('div', 'leaflet-label-overlay');
+        }
+    });  
+
+ var geojson;
+
+  // // event listener for highlight features on rollover
+
+    function highlightFeature(e) {
+        var layer = e.target;
+
+        layer.setStyle({
+        weight: 3.5,
+        color: '#ffff00',
+        fillOpacity: 1
+    });
+
+      if (!L.Browser.ie && !L.Browser.opera) {
+        layer.bringToFront();
+      }
+
+      info.update(layer.feature.properties);
+      }
+
+
+  // // event listener for highlight features on mouse-out
+
+    function resetHighlight(e) {
+    geojson.resetStyle(e.target);
+  }
+
+
+  // // use onEachFeature to add the event listeners to the hexbins
+
+    function onEachFeature(feature, layer) {
+      layer.on({
+        mouseover: highlightFeature,
+        mouseout: resetHighlight,
+    });
+  }
+
+// RENDER THE GEOJSON (w/ event listeners & style attached to)
+
+geojson = L.geoJson(Twitter, {
+  style: style,
+  onEachFeature: onEachFeature
+}).addTo(map);
+
+
+// CUSTOM CONTROL (window)
+
+var info = L.control();
+
+    info.onAdd = function (map) { 
+      this._div = L.DomUtil.create('div', 'info');
+      this.update();
+      return this._div;
+    };
+    
+    info.update = function (props) {
+      this._div.innerHTML = '<h4>Location Quotient (LQ):</h4>' +  (props ?
+         props.TwitterLQ + ' LQ '
+        : '(hover over a hexbin)');
+    };
+
+    info.addTo(map);
+
+// add text labels:
+    var labelLocation = new L.LatLng(-36.820556, 174.74);
+    var labelTitle = new L.LabelOverlay(labelLocation, '<b>AUCKLAND</b>');
+    map.addLayer(labelTitle);
+
+
+    var labelLocation2 = new L.LatLng(-41.288889, 174.777222);
+    var labelTitle2 = new L.LabelOverlay(labelLocation2, '<b>WELLINGTON</b>');
+    map.addLayer(labelTitle2);
+
+    var labelLocation3 = new L.LatLng(-43.53, 172.620278);
+    var labelTitle3 = new L.LabelOverlay(labelLocation3, '<b>CHRISTCHURCH</b>');
+    map.addLayer(labelTitle3);
+
+    var labelLocation4 = new L.LatLng(-45.866667, 169.5);
+    var labelTitle4 = new L.LabelOverlay(labelLocation4, '<b>DUNEDIN</b>');
+    map.addLayer(labelTitle4);
+
+    var labelLocation5 = new L.LatLng(-37.783333, 175.283333);
+    var labelTitle5 = new L.LabelOverlay(labelLocation5, '<b>HAMILTON</b>');
+    map.addLayer(labelTitle5);
+
+    var labelLocation6 = new L.LatLng(-41.270833, 173.283889);
+    var labelTitle6 = new L.LabelOverlay(labelLocation6, '<b>NELSON</b>');
+    map.addLayer(labelTitle6);
+
+
+    // In order to prevent the text labels to "jump" when zooming in and out,
+    // in Google Chrome, I added this event handler:
+
+    map.on('movestart', function () {
+        map.removeLayer(labelTitle);
+        map.removeLayer(labelTitle2);
+        map.removeLayer(labelTitle3);
+        map.removeLayer(labelTitle4);
+        map.removeLayer(labelTitle5);
+        map.removeLayer(labelTitle6);
+    });
+    map.on('moveend', function () {
+        map.addLayer(labelTitle);
+        map.addLayer(labelTitle2);
+        map.addLayer(labelTitle3);
+        map.addLayer(labelTitle4);
+        map.addLayer(labelTitle5);
+        map.removeLayer(labelTitle6);
+    });
+
+
+var legend = L.control({position: 'bottomright'});
+
+                legend.onAdd = function (map) {
+
+                    var div = L.DomUtil.create('div', 'info legend'),
+                        grades = [0.1, 0.9, 1.0, ],
+                        labels = ['<strong>Relative intensity of tweeting about Pizza versus All Blacks</strong>'],
+                        key_labels = ["more All Blacks tweets: LQ < 1", "~ equal All Blacks / Pizza tweeting: LQ = 1", "more Pizza tweets: LQ > 1"],
+                        from, to;
+
+                    for (var i = 0; i < grades.length; i++) {
+                        from = grades[i];
+                        to = grades[i + 1];
+
+                        labels.push(
+                            '<i style="background:' + getColor(from + '1' ) + '"></i> ' + key_labels[i]);
+                                                } //changed '1' to get right colors on the legend but first field is still second green, not sure why??
+
+                    div.innerHTML = labels.join('<br>');
+                    return div;
+                };
+
+                legend.addTo(map);
+
+
+
+</script>
+
+
+
+
+
+<br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<br>
+</body></html>
