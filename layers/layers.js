@@ -23,6 +23,6 @@ jsonSource_FinalProject.addFeatures(features_FinalProject);var lyr_FinalProject 
 
 lyr_FinalProject.setVisible(true);
 var layersList = [baseLayer,lyr_FinalProject];
-lyr_FinalProject.set('fieldAliases', {'Area': 'Area', 'Jobless 13': 'Jobless 13', 'Change 06': 'Change 06', 'Population': 'Population', 'AU2013': 'AU2013', 'Catagory': 'Catagory', });
-lyr_FinalProject.set('fieldImages', {'Area': 'TextEdit', 'Jobless 13': 'TextEdit', 'Change 06': 'TextEdit', 'Population': 'TextEdit', 'AU2013': 'Hidden', 'Catagory': 'TextEdit', });
-lyr_FinalProject.set('fieldLabels', {'Area': 'inline label', 'Jobless 13': 'inline label', 'Change 06': 'inline label', 'Population': 'inline label', 'Catagory': 'inline label', });
+lyr_FinalProject.set('fieldAliases', {'Area': 'Area', 'Jobless 13': 'Jobless 13', 'Change 06': 'Change 06', 'Population': 'Population', 'AU2013': 'AU2013', 'Catagory': 'Catagory', 'labels_Labelling': 'labels_Labelling', });
+lyr_FinalProject.set('fieldImages', {'Area': 'TextEdit', 'Jobless 13': 'TextEdit', 'Change 06': 'TextEdit', 'Population': 'TextEdit', 'AU2013': 'Hidden', 'Catagory': 'TextEdit', 'labels_Labelling': 'TextEdit', });
+lyr_FinalProject.set('fieldLabels', {'Area': 'inline label', 'Jobless 13': 'inline label', 'Change 06': 'inline label', 'Population': 'inline label', 'Catagory': 'inline label', 'labels_Labelling': 'no label', });
