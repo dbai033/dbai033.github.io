@@ -8,7 +8,49 @@ a {
   text-decoration: none;
 }
 
-</style></head><body>
+</style><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="http://npmcdn.com/leaflet@0.7.7/dist/leaflet.css"><style>
+a.nav:link {color:white; background-color:transparent; text-decoration:none}
+a.nav:visited {color:white; background-color:transparent; text-decoration:none}
+a.nav:hover {color:#00ffff; background-color:transparent; text-decoration:none}
+a.nav:active {color:white; background-color:transparent; text-decoration:none}
+.info {
+padding: 12px;
+font: 16px Arial, sans-serif;
+background: white;
+background: rgba(255,255,255,0.8);
+box-shadow: 0 0 15px rgba(0,0,0,0.2);
+border-radius: 10px;
+}
+.info h4 {
+margin: 0 0 5px;
+color: black;
+}
+.legend {
+text-align: left;
+line-height: 24px;
+color: #555;
+}
+.legend i {
+width: 24px;
+height: 24px;
+float: left;
+margin-right: 8px;
+opacity: .65;
+}
+.leaflet-popup-close-button {
+display:none;
+}
+.leaflet-label-overlay {
+line-height: 0px;
+margin-top: 12px;
+position: absolute;
+padding: 12px;
+font: 14px Arial, sans-serif;
+text-shadow: -1px 0 white, 0 1px white,
+1px 0 white, 0 -1px white
+}
+</style></head>
+<body>
 <table style="text-align: left; width: 1870px; height: 282px;" border="0" cellpadding="2" cellspacing="2">
 <tbody>
 <tr>
@@ -64,7 +106,7 @@ Twitter</span> </span></big></big></div>
 <td style="color: white; background-color: rgb(78, 78, 156);"><a href="thelab4.html"><big>Lab
 4</big></a></td>
 <td style="color: white; background-color: rgb(78, 78, 156);"><a href="Lab5.html"><big>Lab
-5</big></a></td>
+5</big></a></td><td style="background-color: rgb(78, 78, 156);"><a href="Lab5.html"><span style="color: white;">Project</span></a></td>
 </tr>
 </tbody>
 </table>
@@ -73,54 +115,13 @@ Twitter</span> </span></big></big></div>
 &nbsp;&nbsp;&nbsp;<span style="font-family: Century;">Where
 does New Zealand tweet more about Pizza than the All Blacks?</span>
 </span></big></big></big><br>
-<div style="text-align: left;"><title>lab 5</title>
+<div style="text-align: left;">
 
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="http://npmcdn.com/leaflet@0.7.7/dist/leaflet.css">
+
+
+
 <script src="http://npmcdn.com/leaflet@0.7.7/dist/leaflet.js"></script>
-<style>
-a.nav:link {color:white; background-color:transparent; text-decoration:none}
-a.nav:visited {color:white; background-color:transparent; text-decoration:none}
-a.nav:hover {color:#00ffff; background-color:transparent; text-decoration:none}
-a.nav:active {color:white; background-color:transparent; text-decoration:none}
-.info {
-padding: 12px;
-font: 16px Arial, sans-serif;
-background: white;
-background: rgba(255,255,255,0.8);
-box-shadow: 0 0 15px rgba(0,0,0,0.2);
-border-radius: 10px;
-}
-.info h4 {
-margin: 0 0 5px;
-color: black;
-}
-.legend {
-text-align: left;
-line-height: 24px;
-color: #555;
-}
-.legend i {
-width: 24px;
-height: 24px;
-float: left;
-margin-right: 8px;
-opacity: .65;
-}
-.leaflet-popup-close-button {
-display:none;
-}
-.leaflet-label-overlay {
-line-height: 0px;
-margin-top: 12px;
-position: absolute;
-padding: 12px;
-font: 14px Arial, sans-serif;
-text-shadow: -1px 0 white, 0 1px white,
-1px 0 white, 0 -1px white
-}
-</style>
+
 <div id="map" style="width: 100%; height: 820px;"></div>
 <div style="text-align: center;"><script type="text/javascript" src="../js/Twitter.js"></script><span style="font-style: italic;">Note: Hexbins must have a minimum count of 0.001% of the total class count to be included in this analysis. &nbsp; &nbsp; &nbsp;</span>
 <script>
